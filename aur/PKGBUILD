@@ -1,6 +1,6 @@
 # Maintainer: Ramazan Berk Şirin <ramazanberksirin@protonmail.com>
 pkgname=chess-bin
-pkgver=1.0.0
+pkgver=1.0.1
 pkgrel=1
 pkgdesc="Chess with variants (Fog of War, Bughouse, 4-player, Crazyhouse, Atomic…), AI, LAN and puzzles — Flutter + Rust"
 arch=('x86_64')

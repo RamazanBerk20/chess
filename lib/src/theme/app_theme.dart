@@ -15,7 +15,13 @@ abstract final class AppTheme {
 
   static ThemeData _build(Brightness brightness) {
     final scheme = ColorScheme.fromSeed(seedColor: _seed, brightness: brightness);
-    final base = ThemeData(colorScheme: scheme, useMaterial3: true);
+    final base = ThemeData(
+      colorScheme: scheme,
+      useMaterial3: true,
+      // Per-glyph fallback so CJK (日本語 / 中文 / 한국어) renders on desktop,
+      // where the default font has no CJK glyphs.
+      fontFamilyFallback: const ['NotoSansCJK'],
+    );
 
     return base.copyWith(
       scaffoldBackgroundColor: scheme.surface,
