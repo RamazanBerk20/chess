@@ -1,0 +1,10 @@
+[package]
+name = "chess_ai"
+edition.workspace = true
+version.workspace = true
+
+# Pure search + evaluation — NO flutter_rust_bridge / Flutter dependency.
+# Search accepts a `Fn() -> bool` cancel predicate so cancellation stays bridge-free.
+[dependencies]
+chess_core = { path = "../chess_core" }
+rand = { workspace = true }

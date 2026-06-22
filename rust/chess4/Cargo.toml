@@ -1,0 +1,9 @@
+[package]
+name = "chess4"
+edition.workspace = true
+version.workspace = true
+
+[lib]
+
+[dependencies]
+serde = { workspace = true }

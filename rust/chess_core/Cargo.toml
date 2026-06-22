@@ -1,0 +1,10 @@
+[package]
+name = "chess_core"
+edition.workspace = true
+version.workspace = true
+
+# Pure rules engine — NO flutter_rust_bridge / Flutter dependency.
+[dependencies]
+serde = { workspace = true }
+thiserror = { workspace = true }
+rand = { workspace = true }

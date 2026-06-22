@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Satranç
+GenericName=Chess
+Comment=Chess with variants, AI, LAN multiplayer and puzzles
+Exec=chess
+Icon=chess
+Terminal=false
+Categories=Game;BoardGame;
+Keywords=chess;satranc;board;game;

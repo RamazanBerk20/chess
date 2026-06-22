@@ -1,0 +1,14 @@
+[package]
+name = "chess_net"
+edition.workspace = true
+version.workspace = true
+
+# LAN discovery + protocol — NO flutter_rust_bridge / Flutter dependency.
+# Validates every incoming move against chess_core.
+[dependencies]
+chess_core = { path = "../chess_core" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tokio = { version = "1", features = ["rt-multi-thread", "net", "io-util", "sync", "time", "macros"] }
+mdns-sd = "0.20"

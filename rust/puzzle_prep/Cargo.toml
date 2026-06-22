@@ -1,0 +1,9 @@
+[package]
+name = "puzzle_prep"
+edition.workspace = true
+version.workspace = true
+
+# Dev/build tool: transforms the Lichess CC0 puzzle CSV into the bundled
+# assets/puzzles/puzzles.json. Not part of the shipped app.
+[dependencies]
+chess_core = { path = "../chess_core" }
