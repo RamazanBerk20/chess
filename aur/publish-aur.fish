@@ -35,15 +35,22 @@ cd $work
 # 4) Copy packaging files from the project.
 cp $repo/aur/$pkg/PKGBUILD $repo/aur/$pkg/.SRCINFO .
 
-# 5) Pin checksums (no-op for git sources) + refresh metadata (computes the real
-#    -git pkgver too).
+# 5) Pin source checksums (no-op for git sources).
 updpkgsums
+
+# 6) Build locally to PROVE it compiles before publishing. -d skips the AUR-only
+#    makedeps (e.g. flutter) that bare makepkg can't install — your PATH tools
+#    build it instead. If the build fails, do NOT push.
+if not makepkg -df --noconfirm
+    echo "!! build failed — NOT pushing. Fix the PKGBUILD and re-run."
+    exit 1
+end
+
+# 7) Regenerate metadata AFTER the build, so a -git pkgver is the real one
+#    (the source is now fetched, so pkgver() computes correctly).
 makepkg --printsrcinfo > .SRCINFO
 
-# 6) Build + install locally to prove it works before publishing.
-makepkg -si
-
-# 7) Review, then push (the AUR only accepts the 'master' branch).
+# 8) Review, then push (the AUR only accepts the 'master' branch).
 git add PKGBUILD .SRCINFO
 git --no-pager diff --cached --stat
 set -l ver (awk -F" = " '/pkgver =/{print $2; exit}' .SRCINFO)
