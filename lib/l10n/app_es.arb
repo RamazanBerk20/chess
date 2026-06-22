@@ -203,5 +203,16 @@
   "fourYellow": "Amarillo",
   "fourGreen": "Verde",
   "fourTeamWins": "Gana {team}",
-  "fourWins": "Gana {player}"
+  "fourWins": "Gana {player}",
+  "support": "Apoyo",
+  "donate": "Donar",
+  "donateSubtitle": "Apoya el desarrollo en GitHub Sponsors",
+  "checkForUpdates": "Buscar actualizaciones",
+  "checkingForUpdates": "Buscando actualizaciones…",
+  "upToDate": "Tienes la última versión.",
+  "updateAvailable": "Actualización disponible",
+  "newVersionAvailable": "Hay una nueva versión disponible:",
+  "download": "Descargar",
+  "later": "Más tarde",
+  "about": "Acerca de"
 }

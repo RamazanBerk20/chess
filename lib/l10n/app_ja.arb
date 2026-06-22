@@ -203,5 +203,16 @@
   "fourYellow": "イエロー",
   "fourGreen": "グリーン",
   "fourTeamWins": "{team}の勝ち",
-  "fourWins": "{player}の勝ち"
+  "fourWins": "{player}の勝ち",
+  "support": "サポート",
+  "donate": "寄付",
+  "donateSubtitle": "GitHub Sponsors で開発を支援",
+  "checkForUpdates": "アップデートを確認",
+  "checkingForUpdates": "アップデートを確認しています…",
+  "upToDate": "最新バージョンです。",
+  "updateAvailable": "アップデートがあります",
+  "newVersionAvailable": "新しいバージョンがあります:",
+  "download": "ダウンロード",
+  "later": "後で",
+  "about": "アプリについて"
 }

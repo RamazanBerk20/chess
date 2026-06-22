@@ -653,35 +653,36 @@ class AppLocalizationsDe extends AppLocalizations {
   String get checksLabel => 'Schachgebote';
 
   @override
-  String get support => 'Support';
+  String get support => 'Unterstützung';
 
   @override
-  String get donate => 'Donate';
+  String get donate => 'Spenden';
 
   @override
-  String get donateSubtitle => 'Support development via GitHub Sponsors';
+  String get donateSubtitle =>
+      'Unterstütze die Entwicklung über GitHub Sponsors';
 
   @override
-  String get checkForUpdates => 'Check for updates';
+  String get checkForUpdates => 'Nach Updates suchen';
 
   @override
-  String get checkingForUpdates => 'Checking for updates…';
+  String get checkingForUpdates => 'Suche nach Updates…';
 
   @override
-  String get upToDate => 'You\'re on the latest version.';
+  String get upToDate => 'Du hast die neueste Version.';
 
   @override
-  String get updateAvailable => 'Update available';
+  String get updateAvailable => 'Update verfügbar';
 
   @override
-  String get newVersionAvailable => 'A new version is available:';
+  String get newVersionAvailable => 'Eine neue Version ist verfügbar:';
 
   @override
-  String get download => 'Download';
+  String get download => 'Herunterladen';
 
   @override
-  String get later => 'Later';
+  String get later => 'Später';
 
   @override
-  String get about => 'About';
+  String get about => 'Über';
 }

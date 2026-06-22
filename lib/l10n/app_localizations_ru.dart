@@ -651,35 +651,35 @@ class AppLocalizationsRu extends AppLocalizations {
   String get checksLabel => 'Шахи';
 
   @override
-  String get support => 'Support';
+  String get support => 'Поддержка';
 
   @override
-  String get donate => 'Donate';
+  String get donate => 'Поддержать';
 
   @override
-  String get donateSubtitle => 'Support development via GitHub Sponsors';
+  String get donateSubtitle => 'Поддержите разработку через GitHub Sponsors';
 
   @override
-  String get checkForUpdates => 'Check for updates';
+  String get checkForUpdates => 'Проверить обновления';
 
   @override
-  String get checkingForUpdates => 'Checking for updates…';
+  String get checkingForUpdates => 'Проверка обновлений…';
 
   @override
-  String get upToDate => 'You\'re on the latest version.';
+  String get upToDate => 'У вас последняя версия.';
 
   @override
-  String get updateAvailable => 'Update available';
+  String get updateAvailable => 'Доступно обновление';
 
   @override
-  String get newVersionAvailable => 'A new version is available:';
+  String get newVersionAvailable => 'Доступна новая версия:';
 
   @override
-  String get download => 'Download';
+  String get download => 'Скачать';
 
   @override
-  String get later => 'Later';
+  String get later => 'Позже';
 
   @override
-  String get about => 'About';
+  String get about => 'О приложении';
 }

@@ -1,4 +1,4 @@
-# AUR package (`satranc-bin`)
+# AUR package (`chess-bin`)
 
 A binary AUR package that installs the prebuilt Linux release from GitHub
 Releases (no Flutter/Rust toolchain needed to install).
@@ -10,8 +10,8 @@ repo. Publishing is manual (needs your AUR SSH key — the one you used before).
 
 ```sh
 # 1) Clone the (empty) AUR repo for the package name
-git clone ssh://aur@aur.archlinux.org/satranc-bin.git
-cd satranc-bin
+git clone ssh://aur@aur.archlinux.org/chess-bin.git
+cd chess-bin
 
 # 2) Copy PKGBUILD + .SRCINFO from this repo's aur/ dir
 cp /path/to/chess/aur/PKGBUILD .
@@ -26,7 +26,7 @@ makepkg -si
 
 # 5) Commit + push to the AUR
 git add PKGBUILD .SRCINFO
-git commit -m "satranc-bin 1.0.0"
+git commit -m "chess-bin 1.0.0"
 git push
 ```
 
@@ -38,3 +38,6 @@ git push
 
 Requires a published GitHub Release `v<pkgver>` with the
 `chess-<pkgver>-linux-x86_64.tar.gz` asset (the release workflow produces it).
+
+Note: the package installs the binary as `/usr/bin/chess` and `provides`/
+`conflicts` with `chess`.

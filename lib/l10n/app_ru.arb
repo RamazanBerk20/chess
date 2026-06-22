@@ -203,5 +203,16 @@
   "fourYellow": "Жёлтые",
   "fourGreen": "Зелёные",
   "fourTeamWins": "{team} побеждает",
-  "fourWins": "{player} побеждает"
+  "fourWins": "{player} побеждает",
+  "support": "Поддержка",
+  "donate": "Поддержать",
+  "donateSubtitle": "Поддержите разработку через GitHub Sponsors",
+  "checkForUpdates": "Проверить обновления",
+  "checkingForUpdates": "Проверка обновлений…",
+  "upToDate": "У вас последняя версия.",
+  "updateAvailable": "Доступно обновление",
+  "newVersionAvailable": "Доступна новая версия:",
+  "download": "Скачать",
+  "later": "Позже",
+  "about": "О приложении"
 }

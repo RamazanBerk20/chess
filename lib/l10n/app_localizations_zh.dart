@@ -650,35 +650,35 @@ class AppLocalizationsZh extends AppLocalizations {
   String get checksLabel => '将军次数';
 
   @override
-  String get support => 'Support';
+  String get support => '支持';
 
   @override
-  String get donate => 'Donate';
+  String get donate => '捐赠';
 
   @override
-  String get donateSubtitle => 'Support development via GitHub Sponsors';
+  String get donateSubtitle => '通过 GitHub Sponsors 支持开发';
 
   @override
-  String get checkForUpdates => 'Check for updates';
+  String get checkForUpdates => '检查更新';
 
   @override
-  String get checkingForUpdates => 'Checking for updates…';
+  String get checkingForUpdates => '正在检查更新…';
 
   @override
-  String get upToDate => 'You\'re on the latest version.';
+  String get upToDate => '您使用的是最新版本。';
 
   @override
-  String get updateAvailable => 'Update available';
+  String get updateAvailable => '有可用更新';
 
   @override
-  String get newVersionAvailable => 'A new version is available:';
+  String get newVersionAvailable => '有新版本可用：';
 
   @override
-  String get download => 'Download';
+  String get download => '下载';
 
   @override
-  String get later => 'Later';
+  String get later => '稍后';
 
   @override
-  String get about => 'About';
+  String get about => '关于';
 }

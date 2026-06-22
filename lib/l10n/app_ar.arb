@@ -203,5 +203,16 @@
   "fourYellow": "الأصفر",
   "fourGreen": "الأخضر",
   "fourTeamWins": "فوز {team}",
-  "fourWins": "فوز {player}"
+  "fourWins": "فوز {player}",
+  "support": "الدعم",
+  "donate": "تبرّع",
+  "donateSubtitle": "ادعم التطوير عبر GitHub Sponsors",
+  "checkForUpdates": "التحقق من التحديثات",
+  "checkingForUpdates": "جارٍ التحقق من التحديثات…",
+  "upToDate": "أنت تستخدم أحدث إصدار.",
+  "updateAvailable": "يتوفر تحديث",
+  "newVersionAvailable": "يتوفر إصدار جديد:",
+  "download": "تنزيل",
+  "later": "لاحقًا",
+  "about": "حول"
 }

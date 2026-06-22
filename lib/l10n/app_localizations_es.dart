@@ -652,35 +652,35 @@ class AppLocalizationsEs extends AppLocalizations {
   String get checksLabel => 'Jaques';
 
   @override
-  String get support => 'Support';
+  String get support => 'Apoyo';
 
   @override
-  String get donate => 'Donate';
+  String get donate => 'Donar';
 
   @override
-  String get donateSubtitle => 'Support development via GitHub Sponsors';
+  String get donateSubtitle => 'Apoya el desarrollo en GitHub Sponsors';
 
   @override
-  String get checkForUpdates => 'Check for updates';
+  String get checkForUpdates => 'Buscar actualizaciones';
 
   @override
-  String get checkingForUpdates => 'Checking for updates…';
+  String get checkingForUpdates => 'Buscando actualizaciones…';
 
   @override
-  String get upToDate => 'You\'re on the latest version.';
+  String get upToDate => 'Tienes la última versión.';
 
   @override
-  String get updateAvailable => 'Update available';
+  String get updateAvailable => 'Actualización disponible';
 
   @override
-  String get newVersionAvailable => 'A new version is available:';
+  String get newVersionAvailable => 'Hay una nueva versión disponible:';
 
   @override
-  String get download => 'Download';
+  String get download => 'Descargar';
 
   @override
-  String get later => 'Later';
+  String get later => 'Más tarde';
 
   @override
-  String get about => 'About';
+  String get about => 'Acerca de';
 }

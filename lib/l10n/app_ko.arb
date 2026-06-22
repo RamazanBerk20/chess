@@ -203,5 +203,16 @@
   "fourYellow": "노랑",
   "fourGreen": "초록",
   "fourTeamWins": "{team} 승리",
-  "fourWins": "{player} 승리"
+  "fourWins": "{player} 승리",
+  "support": "지원",
+  "donate": "후원",
+  "donateSubtitle": "GitHub Sponsors로 개발을 후원하세요",
+  "checkForUpdates": "업데이트 확인",
+  "checkingForUpdates": "업데이트 확인 중…",
+  "upToDate": "최신 버전입니다.",
+  "updateAvailable": "업데이트 있음",
+  "newVersionAvailable": "새 버전이 있습니다:",
+  "download": "다운로드",
+  "later": "나중에",
+  "about": "정보"
 }

@@ -203,5 +203,16 @@
   "fourYellow": "黄方",
   "fourGreen": "绿方",
   "fourTeamWins": "{team}获胜",
-  "fourWins": "{player}获胜"
+  "fourWins": "{player}获胜",
+  "support": "支持",
+  "donate": "捐赠",
+  "donateSubtitle": "通过 GitHub Sponsors 支持开发",
+  "checkForUpdates": "检查更新",
+  "checkingForUpdates": "正在检查更新…",
+  "upToDate": "您使用的是最新版本。",
+  "updateAvailable": "有可用更新",
+  "newVersionAvailable": "有新版本可用：",
+  "download": "下载",
+  "later": "稍后",
+  "about": "关于"
 }

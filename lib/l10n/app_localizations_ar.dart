@@ -650,35 +650,35 @@ class AppLocalizationsAr extends AppLocalizations {
   String get checksLabel => 'الكشوف';
 
   @override
-  String get support => 'Support';
+  String get support => 'الدعم';
 
   @override
-  String get donate => 'Donate';
+  String get donate => 'تبرّع';
 
   @override
-  String get donateSubtitle => 'Support development via GitHub Sponsors';
+  String get donateSubtitle => 'ادعم التطوير عبر GitHub Sponsors';
 
   @override
-  String get checkForUpdates => 'Check for updates';
+  String get checkForUpdates => 'التحقق من التحديثات';
 
   @override
-  String get checkingForUpdates => 'Checking for updates…';
+  String get checkingForUpdates => 'جارٍ التحقق من التحديثات…';
 
   @override
-  String get upToDate => 'You\'re on the latest version.';
+  String get upToDate => 'أنت تستخدم أحدث إصدار.';
 
   @override
-  String get updateAvailable => 'Update available';
+  String get updateAvailable => 'يتوفر تحديث';
 
   @override
-  String get newVersionAvailable => 'A new version is available:';
+  String get newVersionAvailable => 'يتوفر إصدار جديد:';
 
   @override
-  String get download => 'Download';
+  String get download => 'تنزيل';
 
   @override
-  String get later => 'Later';
+  String get later => 'لاحقًا';
 
   @override
-  String get about => 'About';
+  String get about => 'حول';
 }

@@ -650,35 +650,35 @@ class AppLocalizationsJa extends AppLocalizations {
   String get checksLabel => 'チェック数';
 
   @override
-  String get support => 'Support';
+  String get support => 'サポート';
 
   @override
-  String get donate => 'Donate';
+  String get donate => '寄付';
 
   @override
-  String get donateSubtitle => 'Support development via GitHub Sponsors';
+  String get donateSubtitle => 'GitHub Sponsors で開発を支援';
 
   @override
-  String get checkForUpdates => 'Check for updates';
+  String get checkForUpdates => 'アップデートを確認';
 
   @override
-  String get checkingForUpdates => 'Checking for updates…';
+  String get checkingForUpdates => 'アップデートを確認しています…';
 
   @override
-  String get upToDate => 'You\'re on the latest version.';
+  String get upToDate => '最新バージョンです。';
 
   @override
-  String get updateAvailable => 'Update available';
+  String get updateAvailable => 'アップデートがあります';
 
   @override
-  String get newVersionAvailable => 'A new version is available:';
+  String get newVersionAvailable => '新しいバージョンがあります:';
 
   @override
-  String get download => 'Download';
+  String get download => 'ダウンロード';
 
   @override
-  String get later => 'Later';
+  String get later => '後で';
 
   @override
-  String get about => 'About';
+  String get about => 'アプリについて';
 }

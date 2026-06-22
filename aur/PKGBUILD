@@ -1,5 +1,5 @@
 # Maintainer: Ramazan Berk Şirin <ramazanberksirin@protonmail.com>
-pkgname=satranc-bin
+pkgname=chess-bin
 pkgver=1.0.0
 pkgrel=1
 pkgdesc="Chess with variants (Fog of War, Bughouse, 4-player, Crazyhouse, Atomic…), AI, LAN and puzzles — Flutter + Rust"
@@ -7,11 +7,11 @@ arch=('x86_64')
 url="https://github.com/RamazanBerk20/chess"
 license=('MIT')
 depends=('gtk3')
-provides=('satranc')
-conflicts=('satranc')
+provides=('chess')
+conflicts=('chess')
 options=('!strip' '!debug')
 source=("chess-$pkgver-linux-x86_64.tar.gz::$url/releases/download/v$pkgver/chess-$pkgver-linux-x86_64.tar.gz"
-        "satranc-$pkgver.png::$url/raw/v$pkgver/assets/icon/chess.png"
+        "chess-$pkgver.png::$url/raw/v$pkgver/assets/icon/chess.png"
         "LICENSE-$pkgver::$url/raw/v$pkgver/LICENSE")
 sha256sums=('SKIP'
             'SKIP'
@@ -19,28 +19,28 @@ sha256sums=('SKIP'
 
 package() {
   # Flutter bundle (binary + data/ + lib/) lives at the tarball root.
-  install -dm755 "$pkgdir/opt/satranc"
+  install -dm755 "$pkgdir/opt/chess"
   cp -dr --no-preserve=ownership "$srcdir/chess" "$srcdir/data" "$srcdir/lib" \
-    "$pkgdir/opt/satranc/"
-  chmod 755 "$pkgdir/opt/satranc/chess"
+    "$pkgdir/opt/chess/"
+  chmod 755 "$pkgdir/opt/chess/chess"
 
   install -dm755 "$pkgdir/usr/bin"
-  ln -s /opt/satranc/chess "$pkgdir/usr/bin/satranc"
+  ln -s /opt/chess/chess "$pkgdir/usr/bin/chess"
 
-  install -Dm644 "$srcdir/satranc-$pkgver.png" \
-    "$pkgdir/usr/share/icons/hicolor/512x512/apps/satranc.png"
+  install -Dm644 "$srcdir/chess-$pkgver.png" \
+    "$pkgdir/usr/share/icons/hicolor/512x512/apps/chess.png"
   install -Dm644 "$srcdir/LICENSE-$pkgver" \
     "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 
   install -dm755 "$pkgdir/usr/share/applications"
-  cat > "$pkgdir/usr/share/applications/satranc.desktop" <<'EOF'
+  cat > "$pkgdir/usr/share/applications/chess.desktop" <<'EOF'
 [Desktop Entry]
 Type=Application
-Name=Satranç
+Name=Chess
 GenericName=Chess
 Comment=Chess with variants, AI, LAN and puzzles
-Exec=satranc
-Icon=satranc
+Exec=chess
+Icon=chess
 Terminal=false
 Categories=Game;BoardGame;
 EOF
