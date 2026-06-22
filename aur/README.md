@@ -1,43 +1,45 @@
-# AUR package (`chess-bin`)
+# AUR packages
 
-A binary AUR package that installs the prebuilt Linux release from GitHub
-Releases (no Flutter/Rust toolchain needed to install).
+Three flavours (each its own AUR repo). All install `/usr/bin/chess`; they
+`conflict` so only one is installed at a time.
 
-These files are kept in the repo for reference; the AUR has its **own** git
-repo. Publishing is manual (needs your AUR SSH key — the one you used before).
+| Package | Build | When to use |
+|---------|-------|-------------|
+| [`chess-bin`](chess-bin/) | installs the prebuilt GitHub release tarball | fastest, no toolchain |
+| [`chess`](chess/) | builds the tagged release from source | reproducible source build |
+| [`chess-git`](chess-git/) | builds the latest `main` from source | bleeding edge |
 
-## First-time publish
+`chess` / `chess-git` build with Flutter + Rust, so they need
+`makedepends=(flutter rust clang cmake ninja pkgconf git)`. If your AUR `flutter`
+package is named differently (e.g. `flutter-bin`), adjust that one makedepend.
 
-```sh
-# 1) Clone the (empty) AUR repo for the package name
-git clone ssh://aur@aur.archlinux.org/chess-bin.git
-cd chess-bin
+## Publish / update (uses your existing `~/.ssh/aur` key)
 
-# 2) Copy PKGBUILD + .SRCINFO from this repo's aur/ dir
-cp /path/to/chess/aur/PKGBUILD .
-cp /path/to/chess/aur/.SRCINFO .
-
-# 3) (recommended) pin real checksums instead of SKIP, then refresh .SRCINFO
-updpkgsums
-makepkg --printsrcinfo > .SRCINFO
-
-# 4) Test it builds + installs cleanly
-makepkg -si
-
-# 5) Commit + push to the AUR
-git add PKGBUILD .SRCINFO
-git commit -m "chess-bin 1.0.0"
-git push
+```fish
+fish aur/publish-aur.fish chess-bin   # or: chess  |  chess-git
 ```
 
-## Updating for a new release
+The script: ensures the ssh-config entry → tests AUR auth → clones the package
+repo → copies its `PKGBUILD`/`.SRCINFO` → `updpkgsums` + regenerates `.SRCINFO`
+→ `makepkg -si` (build/install to verify) → shows the diff → asks before pushing
+(to `master`, which the AUR requires).
 
-1. Bump `pkgver` (and reset `pkgrel=1`) in `PKGBUILD`.
-2. `updpkgsums` then `makepkg --printsrcinfo > .SRCINFO`.
-3. Commit + push.
+> You only need ONE key for all packages — AUR keys are per-account. No new keys.
 
-Requires a published GitHub Release `v<pkgver>` with the
-`chess-<pkgver>-linux-x86_64.tar.gz` asset (the release workflow produces it).
+## Manual (per package)
 
-Note: the package installs the binary as `/usr/bin/chess` and `provides`/
-`conflicts` with `chess`.
+```fish
+git clone ssh://aur@aur.archlinux.org/chess.git ~/aur-chess
+cd ~/aur-chess
+cp ~/Belgeler/AI/Code/Chess/aur/chess/{PKGBUILD,.SRCINFO} .
+updpkgsums; and makepkg --printsrcinfo > .SRCINFO
+makepkg -si
+git add -A; and git commit -m "chess 1.0.1"; and git branch -M master; and git push origin master
+```
+
+## New release
+
+After tagging a new `vX.Y.Z` (CI builds the assets):
+
+- `chess-bin` / `chess`: bump `pkgver` (reset `pkgrel=1`), then re-run the script.
+- `chess-git`: nothing to bump — `pkgver()` tracks git; just re-run to refresh.
