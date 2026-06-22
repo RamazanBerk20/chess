@@ -43,8 +43,12 @@ set -l ver (grep '^pkgver=' PKGBUILD | cut -d= -f2)
 read -P "Push $pkg $ver to the AUR? [y/N] " ans
 if test "$ans" = y -o "$ans" = Y
     git commit -m "$pkg $ver"
-    git push
-    echo ">> done: https://aur.archlinux.org/packages/$pkg"
+    git branch -M master   # the AUR only accepts pushes to 'master', not 'main'
+    if git push origin master
+        echo ">> done: https://aur.archlinux.org/packages/$pkg"
+    else
+        echo "!! push failed (see error above)"
+    end
 else
-    echo ">> skipped. later:  cd $work; and git commit -am '$pkg $ver'; and git push"
+    echo ">> skipped. later:  cd $work; and git branch -M master; and git push origin master"
 end
